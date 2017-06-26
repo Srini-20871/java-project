@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<project name="Rectangle-Build" default="main" basedir=".">
+<property environment="env"/>
+  <description>
+    simple build file
+  </description>
+  <!-- set global properties for this build -->
+  <property name="src.dir" location="src"/>
+  <property name="build.dir" location="build"/>
+  <property name="dist.dir" location="dist"/>
+  <path id="class.path">
+	<pathelement location="./bin">
+  </path>
+    
+  <target name="compile" depends="clean,makedir" description="compile the classes">
+<!-- Compile the java code from ${src} into ${build} -- 
+    <javac srcdir="${src.dir}" destdir="${buil.dir}"/>
+    	<classpath refid="class.path">
+    </javac>
+  </target>
+
+<target name="makedir">
+    <mkdir dir="${build.dir}"/>
+    <mkdir dir="${docs.dir}"/>
+    <mkdir dir="${dist.dir}"/>
+</target>
+
+  <target name="jar" depends="compile" description="generate the distribution">
+    <!-- Put everything in ${build.dir} into the Rectangle.jar file -->
+    <jar jarfile="${dist.dir}/Rectangle.jar" basedir="${build.dir}"/>
+       <manifest>
+	<attribute name="Main-class" value="Rectangulator" />
+       </manifest>
+   </jar>
+  </target>
+
+  <target name="clean"
+        description="clean up">
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build.dir}"/>
+    <delete dir="${dist.dir}"/>
+    <delete dir="${docs.dir}"/>
+  </target>
+</project>
