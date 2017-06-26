@@ -8,7 +8,7 @@ public class Rectangle{
 		this.width=width;
 	}
 
-	public getArea(){
+	public int getArea(){
   		return length*width;
 	}
 
