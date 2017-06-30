@@ -10,11 +10,7 @@
   <property name="build.dir" location="bin"/>
   <property name="dist.dir" location="dist"/>
   <path id="class.path">
-<<<<<<< HEAD
-	<pathelement location="./bin"/>
-=======
 	<pathelement location="./bin" />
->>>>>>> 0de029b6cdaeac962c9e9d568a961d244a714dba
   </path>
     
   <target name="compile" depends="clean,makedir" description="compile the classes">
@@ -39,11 +35,7 @@
    </jar>
   </target>
 <target name="main" depends="compile,jar">
-<<<<<<< HEAD
-        <description> Main target </description>
-=======
 	<description> Main target </description>
->>>>>>> 0de029b6cdaeac962c9e9d568a961d244a714dba
 </target>
 
   <target name="clean"
