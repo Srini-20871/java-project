@@ -10,7 +10,8 @@
   <property name="build.dir" location="bin"/>
   <property name="dist.dir" location="dist"/>
   <path id="class.path">
-	<pathelement location="./bin" />
+	<pathelement location="${build.dir}" />
+	<pathelement location="./lib/junit-4.10.jar" />
   </path>
     
   <target name="compile" depends="clean,makedir" description="compile the classes">
