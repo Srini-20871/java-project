@@ -23,3 +23,4 @@ pipeline {
           archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
         }
       }
+}
