@@ -26,8 +26,9 @@
 		<mkdir dir="${report.dir}"/>
 	</target>
 	<target name="compile" depends="makedir">
-    		<javac srcdir="${src.dir}"i destdir="${build.dir}"/>
-    		<classpath refid="class.path"/>
+    		<javac srcdir="${src.dir}"i destdir="${build.dir}">
+    			<classpath refid="class.path"/>
+		</javac>
 	</target>
 
   	<target name="test" depends="clean,makedir,compile" description="test the module">
